@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es"> <!-- Define el idioma de la página como español -->
+<head>
+    <meta charset="UTF-8"> <!-- Define la codificación de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura la vista para dispositivos móviles -->
+    <title>Proyecto Unidad 3</title> <!-- Título de la página que aparece en la pestaña del navegador -->
+    <link rel="stylesheet" href="styles.css"> <!-- Vincula el archivo CSS para aplicar estilos -->
+    
+    <!-- Preconexión para optimizar la carga de fuentes de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"> <!-- Importa la fuente Montserrat -->
+</head>
+<body>
+    <!-- Menú de navegación -->
+    <header>
+        <nav class="navbar"> <!-- Barra de navegación -->
+            <div class="container"> <!-- Contenedor para centrar el contenido -->
+                <div class="logo">Mi Portfolio</div> <!-- Logotipo o título del sitio -->
+                <input type="checkbox" id="menu-toggle"> <!-- Checkbox para controlar el menú en dispositivos móviles -->
+                <label for="menu-toggle" class="hamburger"> <!-- Etiqueta para el botón de menú -->
+                    <span></span> <!-- Icono de la barra del menú -->
+                    <span></span> <!-- Icono de la barra del menú -->
+                    <span></span> <!-- Icono de la barra del menú -->
+                </label>
+                <ul class="menu"> <!-- Lista de enlaces de navegación -->
+                    <li><a href="proyecto.html">Inicio</a></li> <!-- Enlace a la página de inicio -->
+                    <li><a href="servicios.html">Servicios</a></li> <!-- Enlace a la página de servicios -->
+                    <li><a href="sobre-mi.html">Sobre Mí</a></li> <!-- Enlace a la página sobre el autor -->
+                    <li><a href="contacto.html">Contacto</a></li> <!-- Enlace a la página de contacto -->
+                    <li><a href="proyectos.html">Proyectos</a></li> <!-- Enlace a la página de proyectos -->
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Sección de inicio (Bienvenida) -->
+    <section id="inicio" class="section"> <!-- Sección de bienvenida -->
+        <div class="container"> <!-- Contenedor para centrar el contenido -->
+            <b><p style="font-size: 36px;">Bienvenido a Mi Portfolio</p></b> <!-- Mensaje de bienvenida con un tamaño de fuente grande -->
+            <img src="imagen.jpg" alt="Descripción de la imagen" style="width: 100%; height: auto;"> <!-- Imagen de bienvenida que ocupa el ancho completo -->
+        </div>
+    </section>
+
+    <script src="scripts.js"></script> <!-- Vincula el archivo JavaScript para agregar interactividad -->
+</body>
+</html>
+

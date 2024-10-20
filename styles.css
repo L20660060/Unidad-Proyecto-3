@@ -1,0 +1,245 @@
+/* Fuentes y colores */
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif; /* Fuente principal */
+    color: #333; /* Color del texto */
+    background-color: #d5bca2; /* Color de fondo */
+}
+
+h1, h2 {
+    font-weight: 700; /* Negrita */
+    color: #222; /* Color de los encabezados */
+}
+
+/* Navbar */
+.navbar {
+    background-color: #004a9f; /* Color de fondo de la barra de navegación */
+    position: fixed; /* Fija la barra en la parte superior */
+    width: 100%; /* Ancho completo */
+    z-index: 1000; /* Asegura que esté encima de otros elementos */
+    top: 0; /* Posición en la parte superior */
+    left: 0; /* Sin desplazamiento a la izquierda */
+    padding: 15px; /* Espaciado interno */
+}
+
+.navbar .container {
+    display: flex; /* Flexbox para alinear elementos */
+    justify-content: space-between; /* Espaciado entre elementos */
+    align-items: center; /* Alinea verticalmente los elementos */
+}
+
+.logo {
+    font-size: 1.8em; /* Tamaño del logotipo */
+    font-weight: 700; /* Negrita para el logotipo */
+    color: white; /* Color del logotipo */
+}
+
+.menu {
+    display: flex; /* Muestra el menú como un contenedor flex */
+    list-style: none; /* Elimina el estilo de lista */
+}
+
+.menu li {
+    margin: 0 15px; /* Espaciado entre elementos del menú */
+}
+
+.menu a {
+    color: white; /* Color del texto del enlace */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 1.2em; /* Tamaño del texto */
+    transition: color 0.3s ease; /* Transición suave para el color al pasar el mouse */
+}
+
+.menu a:hover {
+    color: #f0a500; /* Color del enlace al pasar el mouse */
+}
+
+/* Responsive hamburger menu */
+.hamburger {
+    display: none; /* Oculta el menú en pantallas grandes */
+    flex-direction: column; /* Alineación vertical */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+
+.hamburger span {
+    width: 30px; /* Ancho de las líneas del menú hamburguesa */
+    height: 3px; /* Alto de las líneas */
+    background: white; /* Color de las líneas */
+    margin: 5px 0; /* Espaciado entre líneas */
+}
+
+/* Menu responsive */
+#menu-toggle {
+    display: none; /* Oculta el checkbox para el menú hamburguesa */
+}
+
+#menu-toggle:checked + .menu {
+    display: flex; /* Muestra el menú al marcar el checkbox */
+    flex-direction: column; /* Alineación vertical */
+    background: #004a9f; /* Color de fondo del menú */
+    position: absolute; /* Posicionamiento absoluto */
+    top: 60px; /* Espacio desde la parte superior */
+    width: 100%; /* Ancho completo */
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: none; /* Oculta el menú en pantallas pequeñas */
+    }
+
+    .hamburger {
+        display: flex; /* Muestra el menú hamburguesa */
+    }
+}
+
+/* Secciones */
+.section {
+    padding: 100px 20px; /* Espaciado interno de la sección */
+    text-align: center; /* Alineación centrada */
+}
+
+.bg-light {
+    background-color: #eaeaea; /* Color de fondo para secciones claras */
+}
+
+.container {
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor */
+    padding: 0 20px; /* Espaciado interno */
+}
+
+/* Galería */
+.gallery {
+    display: flex; /* Flexbox para la galería */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en múltiples líneas */
+    gap: 30px; /* Espacio entre elementos */
+    justify-content: center; /* Centra la galería */
+}
+
+.project {
+    position: relative; /* Necesario para el overlay */
+    width: 300px; /* Ancho de cada proyecto */
+    height: 200px; /* Alto de cada proyecto */
+    overflow: hidden; /* Oculta el desbordamiento */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.project img {
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Alto completo */
+    object-fit: cover; /* Asegura que la imagen cubra el área */
+    transition: transform 0.4s ease-in-out; /* Transición suave para la imagen */
+}
+
+.project:hover img {
+    transform: scale(1.1); /* Aumenta la imagen al pasar el mouse */
+}
+
+.overlay {
+    position: absolute; /* Posicionamiento absoluto */
+    top: 0; /* Desde la parte superior */
+    left: 0; /* Desde la izquierda */
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Alto completo */
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    opacity: 0; /* Inicialmente invisible */
+    transition: opacity 0.3s ease-in-out; /* Transición suave para la opacidad */
+    display: flex; /* Flexbox para centrar el contenido */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+}
+
+.project:hover .overlay {
+    opacity: 1; /* Muestra el overlay al pasar el mouse */
+}
+
+.text {
+    color: white; /* Color del texto en el overlay */
+    font-size: 1.5em; /* Tamaño del texto */
+    font-weight: bold; /* Negrita */
+}
+
+/* Modal */
+.modal {
+    display: none; /* Oculta el modal inicialmente */
+    position: fixed; /* Posicionamiento fijo */
+    top: 0; /* Desde la parte superior */
+    left: 0; /* Desde la izquierda */
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Alto completo */
+    background: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+}
+
+.modal-content {
+    background: white; /* Fondo blanco para el contenido del modal */
+    padding: 30px; /* Espaciado interno */
+    width: 50%; /* Ancho del modal */
+    border-radius: 10px; /* Bordes redondeados */
+    position: relative; /* Posicionamiento relativo */
+    text-align: left; /* Alineación del texto a la izquierda */
+}
+
+.modal .close {
+    position: absolute; /* Posicionamiento absoluto */
+    top: 10px; /* Desde la parte superior */
+    right: 15px; /* Desde la derecha */
+    font-size: 2em; /* Tamaño de la letra del botón de cerrar */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    color: #333; /* Color del texto */
+}
+
+.modal .close:hover {
+    color: #f0a500; /* Color del texto al pasar el mouse */
+}
+
+/* Estilos para el formulario de contacto */
+.form-group {
+    margin-bottom: 1.5rem; /* Espacio entre campos del formulario */
+}
+
+label {
+    display: block; /* Hace que las etiquetas ocupen toda la línea */
+    font-weight: bold; /* Destaca las etiquetas */
+    margin-bottom: 0.5rem; /* Espacio debajo de la etiqueta */
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%; /* Hace que los campos ocupen todo el ancho del contenedor */
+    padding: 10px; /* Espaciado interno para los campos */
+    border: 1px solid #ccc; /* Bordes suaves */
+    border-radius: 4px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: border-color 0.3s; /* Efecto de transición en el borde */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #007BFF; /* Cambia el color del borde al enfocar */
+    outline: none; /* Elimina el contorno predeterminado */
+}
+
+textarea {
+    height: 150px; /* Altura específica para el área de texto */
+    resize: none; /* Desactiva el redimensionamiento del área de texto */
+}
+
+.btn {
+    display: inline-block; /* Permite margenes y padding */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    background-color: #007BFF; /* Color de fondo del botón */
+    color: #fff; /* Color del texto */
+    border: none; /* Sin bordes */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    transition: background-color 0.3s; /* Transición de color */
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el mouse */
+}

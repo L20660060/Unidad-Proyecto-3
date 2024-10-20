@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"> <!-- Define la codificación de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura la vista para dispositivos móviles -->
+    <title>Contacto</title> <!-- Título de la página que aparece en la pestaña del navegador -->
+    <link rel="stylesheet" href="styles.css"> <!-- Vincula el archivo CSS para aplicar estilos -->
+</head>
+<body>
+    <header>
+        <nav class="navbar"> <!-- Barra de navegación -->
+            <div class="container"> <!-- Contenedor para centrar el contenido -->
+                <div class="logo">Mi Portfolio</div> <!-- Logotipo o título del sitio -->
+                <ul class="menu"> <!-- Lista de enlaces de navegación -->
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="sobre-mi.html">Sobre Mí</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="proyectos.html">Proyectos</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="section bg-light"> <!-- Sección de contacto con fondo claro -->
+        <div class="container"> <!-- Contenedor para centrar el contenido -->
+            <h2>Contacto</h2> <!-- Título de la sección -->
+            <p>Contáctame para discutir colaboraciones o proyectos.</p> <!-- Descripción -->
+
+            <!-- Formulario de contacto -->
+            <form action="enviar.php" method="POST"> <!-- Define el formulario que envía datos a enviar.php -->
+                <div class="form-group"> <!-- Grupo para el campo Nombre -->
+                    <label for="nombre">Nombre:</label> <!-- Etiqueta para el campo -->
+                    <input type="text" id="nombre" name="nombre" required> <!-- Campo de texto para el nombre -->
+                </div>
+
+                <div class="form-group"> <!-- Grupo para el campo Correo electrónico -->
+                    <label for="correo">Correo electrónico:</label> <!-- Etiqueta para el campo -->
+                    <input type="email" id="correo" name="correo" required> <!-- Campo para el correo electrónico -->
+                </div>
+
+                <div class="form-group"> <!-- Grupo para el campo Asunto -->
+                    <label for="asunto">Asunto:</label> <!-- Etiqueta para el campo -->
+                    <input type="text" id="asunto" name="asunto"> <!-- Campo de texto para el asunto -->
+                </div>
+
+                <div class="form-group"> <!-- Grupo para el campo Mensaje -->
+                    <label for="mensaje">Mensaje:</label> <!-- Etiqueta para el campo -->
+                    <textarea id="mensaje" name="mensaje" required></textarea> <!-- Área de texto para el mensaje -->
+                </div>
+
+                <button type="submit" class="btn">Enviar</button> <!-- Botón para enviar el formulario -->
+            </form>
+
+            <h3>Otras formas de contacto</h3> <!-- Título para otras formas de contacto -->
+            <p>Correo electrónico: <a href="mailto:juan.abisai@example.com">abisailanderos2020@gmail.com</a></p> <!-- Enlace de correo electrónico -->
+            <p>Teléfono: +52 4444486869</p> <!-- Número de teléfono -->
+        </div>
+    </section>
+
+    <script src="scripts.js"></script> <!-- Vincula el archivo JavaScript para agregar interactividad -->
+</body>
+</html>
